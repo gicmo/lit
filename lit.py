@@ -30,7 +30,7 @@ class Paper(object):
             return None
 
         yearEnd = -1
-        for idx in xrange(yearStart, extStart):
+        for idx in xrange(yearStart, extStart+1):
             if not name[idx].isdigit():
                 yearEnd = idx
                 break
