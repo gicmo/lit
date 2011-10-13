@@ -98,6 +98,10 @@ class Filter(object):
 
     @year.setter
     def year(self, value):
+        if not value:
+            self._year = None
+            return
+
         if type(value) != int:
             value = self._parseYear(value)
         self._year = value
@@ -307,6 +311,8 @@ def Command(name, aliases=None):
 @Command('list', ['l'])
 def doList(lib, withFilter):
     melitta = withFilter
+    if not melitta.year:
+        print "Global search! This may take a while..."
     papers = lib.list(withFilter=melitta)
     printPaperList(papers)
     return 0
