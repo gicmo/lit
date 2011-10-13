@@ -40,9 +40,6 @@ class Paper(object):
 
         self._author = name[:yearStart]
         self._year = int(name[yearStart:yearEnd])
-        print self._author, self._year
-
-
 
     @property
     def year(self):
