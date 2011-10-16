@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # (c) 2011 Christian Kellner <kellner@bio.lmu.de>
 
-import gio
 import sys
 import getopt
 import os
